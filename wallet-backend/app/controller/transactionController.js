@@ -30,26 +30,32 @@ function getOpeningBalance(walletId) {
 
 }
 
-function createTransactionQuery (req, res, bal){
+function createTransactionQuery(req, res, bal) {
     const walletId = req.params.id;
     const amount = parseFloat(req.body.amount);
     const desc = req.body.desc;
-    const tType = amount > 0 ? 'Credit' : 'Debit';
-    const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
-    const sql = `INSERT INTO transaction (wallet_id, t_amount, current_bal, t_desc, t_date, t_type) VALUES ("${walletId}", "${amount}", "${bal}", "${desc}", "${date}", "${tType}")`;
+    if (amount) {
+        const tType = amount > 0 ? 'Credit' : 'Debit';
+        const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        const sql = `INSERT INTO transaction (wallet_id, t_amount, current_bal, t_desc, t_date, t_type) VALUES ("${walletId}", "${amount}", "${bal}", "${desc}", "${date}", "${tType}")`;
         db.query(sql, (err, data) => {
             if (err) {
                 res.status(500).send({ 'error': `OOPS! Something went wrong ${err}` });
+            } else {
+                res.json({
+                    "status": "Nice! Wallet balance successfully updated",
+                    "statusCode": 200,
+                    "reponse": {
+                        "id": data.insertId,
+                        "current_bal": bal
+                    }
+                });
             }
-            res.json({
-                "status": "Nice! Wallet balance successfully updated",
-                "statusCode": 200,
-                "reponse": {
-                    "id" : data.insertId,
-                    "current_bal" : bal
-                }
-            });
         });
+    } else {
+        res.status(500).send({ 'error': "Incorrect Balance" });
+    }
+
 }
 
 
