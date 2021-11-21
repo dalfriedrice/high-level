@@ -10,7 +10,7 @@ This project consist of all api's to perform CRUD operations related to wallets 
 * npm install
 * npm start
 
-> **_NOTE:_** Make sure you have the MY SQL database setup on your local and then you can change the credentials in this [file](/app/config/db.config.js).
+> **_NOTE:_** Make sure you have the MY SQL database setup on your local and then you can change the credentials in this [file](/app/config/db.config.js), will add a mysql-dump file as well for make it easy to setup
 > Also please have nodejs & npm installed on your local
 
 ---
