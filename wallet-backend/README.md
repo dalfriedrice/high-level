@@ -25,3 +25,12 @@ There are total of 5 api's that are used here in this app
 | /wallet/setup | POST      |    Creates a new wallet in the wallet table |
 | /transaction/{:id}      | POST      |   Create a new transaction for the wallet id |
 | /transaction/fetch?walletId={id}&limit={limit} | GET | Get all the transactions related to given wallet id
+
+---
+
+# Database
+Dropped a [file](Dump20211122.sql) for mysql dump of the database used by me to work on the app.
+
+One can use any GUI tool like `mysql workbench` to import the same database on the local and get started with the working.
+
+Reference video -> https://www.youtube.com/watch?v=uyP46E0UA9I&ab_channel=CodeJava
