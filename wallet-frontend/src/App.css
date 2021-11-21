@@ -1,0 +1,156 @@
+@import url('toastr/build/toastr.min.css');
+body{
+    margin : 0;
+    padding: 0;
+}
+
+.high-level {
+    margin: 0 auto;
+}
+
+.main-content{
+    margin : 0 50px;
+    padding-top:100px;
+}
+
+.header{
+    padding: 10px 10px 10px;
+    margin : 0;
+    border-bottom: 2px solid #ccc;
+    color: #ec9e12;
+    width: 100%;
+    background: #F8F9F9;
+    height: 35px;
+    position: fixed;
+    box-shadow: 0px 8px 15px #aaaaaa;
+}
+
+.heading{
+    margin: 0;
+}
+
+.fa{
+    cursor: pointer;
+}
+
+.parent-ul {
+    list-style: none;
+    border-radius: 5 px;
+    border: 1 px solid #ccc;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.child-li {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+}
+
+.child-li:last-child{
+    border-bottom: none;
+}
+
+.header-column{
+    width: 25%;
+    text-align: center;
+    color: #d67c7c;
+}
+
+.row-column{
+    width: 25%;
+    text-align: center;
+}
+
+.create-form{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-row{
+    display: flex;
+}
+
+.form-label{
+    width: 50%;
+    display: block;
+    font-size: 20px;
+}
+.form-input{
+    width : 20%;
+    padding: 10px;
+}
+
+.submit-form{
+    cursor: pointer;
+    border: none;
+    background: #eec272;
+    margin: 0 auto;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.redirection-btns{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.redirect-btn{
+    background: #A55858;
+    border: none;
+    width: 10%;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor : pointer;
+}
+
+.utility-btns{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.csvLink{
+    margin-top: 20px;
+    color: black;
+}
+
+.csvLink:hover{
+    color: blue;
+}
+
+.pagination {
+    cursor : pointer;
+    display: flex;
+    list-style: none;
+    outline: none;
+  }
+  .pagination > .active > a{
+    background-color: #47ccde ;
+    border-color: #47ccde ;
+    color: #fff;
+  }
+  .pagination > li > a{
+    border: 1px solid #47ccde ;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    background-color: #47ccde ;
+    border-color: #47ccde;
+    outline: none ;
+  }
+  .pagination > li > a, .pagination > li > span{
+    color: #47ccde
+  }
+  .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+    border-radius: unset
+  }
