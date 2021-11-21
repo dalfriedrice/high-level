@@ -1,11 +1,12 @@
 # Wallet Frontend - High Level
 
 This project is all about showing the UI to perform CRUD operations related to wallet and transaction on UI.
-This is a react based project having four pages
+This is a react based project having five pages
 * All the created wallets
 * All the transaction related to a wallet
 * Create a new wallet
 * Create a new transaction for a given wallet
+* An error page in case if someone enters wrong route
 
 ---
 
