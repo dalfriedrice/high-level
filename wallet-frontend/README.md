@@ -27,3 +27,8 @@ This is a react based project having five pages
 * You can download a CSV for all the wallets as well as all the transactions
 * Succes, error and info are displayed using toastr
 * There are buttons on all the four pages for redirections
+
+# Recorded Video
+
+https://user-images.githubusercontent.com/12258467/142841103-3a207e73-14ee-43cf-b8de-7f439d8f0905.mp4
+
