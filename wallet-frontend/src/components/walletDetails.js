@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import RenderButtons from './buttons';
-import { Pages, TransactionHeaders } from './../constants/constant';
+import { Pages, TransactionHeaders, HerokuApiEndpoint } from './../constants/constant';
 import { CSVLink } from "react-csv";
 import ReactPaginate from 'react-paginate';
 import renderToastr from './renderToastr';
@@ -20,7 +20,7 @@ const WalletDetails = (props) => {
     };
 
     useEffect(() => {
-        fetch(`/transaction/fetch?walletId=${match.params.walletId}&limit=100`).then(res => res.json())
+        fetch(`${HerokuApiEndpoint}transaction/fetch?walletId=${match.params.walletId}&limit=100`).then(res => res.json())
             .then(data => {
                 if (data && data.length) {
                     renderToastr('success', 'Transactions Fetched Successfully');
