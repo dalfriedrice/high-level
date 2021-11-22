@@ -6,3 +6,8 @@ This is a private project and it consist of two app
 ---
 ## Local Setup
 Navigate to the respective apps `Readme` to understand how to setup on local
+
+## Heroku Deployment URL's
+
+UI App -> https://wallet-frontend-heroku.herokuapp.com/
+Nodejs App -> https://wallet-db-heroku.herokuapp.com/
