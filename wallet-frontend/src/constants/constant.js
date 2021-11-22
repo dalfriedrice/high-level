@@ -19,3 +19,5 @@ export const TransactionHeaders = [
     { label: "Type", key: "t_type" },
     { label: "Transact Date", key: "t_date" }
 ]
+
+export const HerokuApiEndpoint = "https://wallet-db-heroku.herokuapp.com/"
