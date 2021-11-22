@@ -1,20 +1,11 @@
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-    host: "localhost",
-    user: "akshay",
-    password: "password",
-    database: "high_level",
+var connection = mysql.createPool({
+    host: "eu-cdbr-west-01.cleardb.com",
+    user: "bf16e0c5caf9b7",
+    password: "3c3b15fc",
+    database: "heroku_55abd3d2995463f",
     insecureAuth : true
-});
-
-connection.connect(function (err) {
-    if (err) {
-        // console.log('error', err);
-        throw err;
-        
-    }
-    console.log('connected!');
 });
 
 module.exports = connection;
