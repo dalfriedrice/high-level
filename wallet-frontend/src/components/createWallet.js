@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import RenderButtons from './buttons';
-import { Pages } from './../constants/constant';
+import { Pages, HerokuApiEndpoint } from './../constants/constant';
 import renderToastr from './renderToastr';
 
 const CreateWallet = () => {
@@ -29,7 +29,7 @@ const CreateWallet = () => {
             })
         };
         setInputs({});
-        fetch('/wallet/setup', requestOptions).then(res => res.json())
+        fetch(`${HerokuApiEndpoint}wallet/setup`, requestOptions).then(res => res.json())
             .then(data => {
                 if (data?.reponse) {
                     renderToastr('success', 'Wallet Created Successfully')
