@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import RenderButtons from './buttons';
-import { Pages, WalletHeaders } from './../constants/constant';
+import { Pages, WalletHeaders, HerokuApiEndpoint } from './../constants/constant';
 import { CSVLink } from "react-csv";
 import ReactPaginate from 'react-paginate';
 import renderToastr from './renderToastr';
@@ -21,7 +21,7 @@ const WalletList = (props) => {
     };
 
     useEffect(() => {
-        fetch('wallet').then(res => res.json())
+        fetch(`${HerokuApiEndpoint}wallet`).then(res => res.json())
             .then(data => {
                 if (data && data.length) {
                     renderToastr('success', 'Wallets Fetched Successfully');
