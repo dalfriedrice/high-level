@@ -35,6 +35,12 @@ One can use any GUI tool like `mysql workbench` to import the same database on t
 
 Reference video -> https://www.youtube.com/watch?v=uyP46E0UA9I&ab_channel=CodeJava
 
+# Postman Collection
+https://www.getpostman.com/collections/2a7a5f0e88641858c7e3
+
+# Heroku Url
+https://wallet-db-heroku.herokuapp.com/
+
 # Demo-Video
 
 https://user-images.githubusercontent.com/12258467/142848320-937b618f-83e1-44d5-970d-1b3f7b50bf76.mp4
